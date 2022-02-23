@@ -1,0 +1,22 @@
+framework: jest
+preRun:
+  command:
+    - npm ci
+preMerge:
+  pattern:
+    - './utils/*.test.js'
+    - './tools/challenge-helper-scripts/**/*.test.js'
+    - './tools/challenge-parser/**/*.test.js'
+    - './tools/scripts/lint/index.test.js'
+    - './tools/ui-components/src/**/*.test.tsx'
+postMerge:
+  pattern:
+    - './utils/*.test.js'
+    - './tools/**/*.test.js'
+    #     - "./tools/challenge-parser/**/*.test.js"
+    #     - "./tools/scripts/lint/index.test.js"
+    - './tools/ui-components/src/**/*.test.tsx'
+postRun:
+  command:
+    - node --version
+version: 1.0
