@@ -11,11 +11,11 @@ preMerge:
     - './tools/ui-components/src/**/*.test.tsx'
 postMerge:
   pattern:
-    - './utils/*.test.js'
-    - './tools/**/*.test.js'
+    - './utils/'
+#     - './tools/**/*.test.js'
     #     - "./tools/challenge-parser/**/*.test.js"
     #     - "./tools/scripts/lint/index.test.js"
-    - './tools/ui-components/src/**/*.test.tsx'
+#     - './tools/ui-components/src/**/*.test.tsx'
 postRun:
   command:
     - node --version
